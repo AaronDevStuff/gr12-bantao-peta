@@ -4,23 +4,23 @@ function initSideNavToggle() {
 
     if (sideNavBtn && sideNav) {
         sideNavBtn.addEventListener('click', function() {
-            if (sideNav.classList.contains('active')) {
-                sideNav.classList.remove('active');
-            } else {
-                sideNav.classList.add('active');
-            }
+            sideNav.classList.toggle('active');
         });
     }
 }
 
-
 const navbarPlaceholder = document.getElementById('navbar-placeholder');
 
-fetch('../../src/html/navbar.html')
-  .then(response => response.text())
-  .then(data => {
-     navbarPlaceholder.innerHTML = data;
+const isSubpage = window.location.pathname.includes('/webpages/');
+const basePath = isSubpage ? '../../' : '';
 
-    initSideNavToggle();
-  }
-);
+fetch(`${basePath}src/html/navbar.html`)
+  .then(response => {
+      if (!response.ok) throw new Error('Navbar failed to load');
+      return response.text();
+  })
+  .then(data => {
+      navbarPlaceholder.innerHTML = data;
+      initSideNavToggle();
+  })
+  .catch(error => console.error(error));
