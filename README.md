@@ -1,2 +1,2 @@
 # gr12-bantao-peta
-project
+a school project
