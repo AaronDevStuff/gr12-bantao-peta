@@ -155,6 +155,10 @@ ul {
     padding-left: calc(var(--font-bit-big) + var(--font-normal));
 }
 
+#side-nav > ul > li > a {
+    font-size: var(--font-bit-big);
+}
+
 #side-nav > ul > * > * > * {
     padding-left: calc(2 * var(--font-bit-big) + var(--font-normal));
 }
