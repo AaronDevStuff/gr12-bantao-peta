@@ -144,6 +144,8 @@ ul {
     color: var(--itext-color1);
     font-family: var(--font-family);
 
+    font-size: var(--font-bit-big);
+
     display: block; 
     width: 100%;      
     box-sizing: border-box;
