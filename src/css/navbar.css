@@ -144,7 +144,7 @@ ul {
     color: var(--itext-color1);
     font-family: var(--font-family);
 
-    font-size: var(--font-bit-big);
+    font-size: var(--font--bit-bit-big);
 
     display: block; 
     width: 100%;      
@@ -160,7 +160,7 @@ ul {
 }
 
 #side-nav > ul > * > * > * {
-    padding-left: calc(2 * var(--font-bit-big) + var(--font-normal));
+    padding-left: calc(2 * var(--font-bit-bit-big) + var(--font-normal));
 }
 
 
