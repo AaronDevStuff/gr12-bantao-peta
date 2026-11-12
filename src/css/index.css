@@ -58,6 +58,7 @@ footer {
 
 .card:hover {
   transform: scale(1.1);
+    zindex: 0;
 }
 
 /* Image Section */
